@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftUI Apple Watch Decimal Pad",
+    name: "Modified Apple Watch Decimal Pad",
     platforms: [.watchOS(.v7)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
