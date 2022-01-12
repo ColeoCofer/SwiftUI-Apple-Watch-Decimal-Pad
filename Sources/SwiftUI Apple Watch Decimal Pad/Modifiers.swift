@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-#if os(watchOS)
+
 import WatchKit
 @available(watchOS 6.0, *)
 public struct DigitButtonModifier: ViewModifier {
@@ -69,9 +69,7 @@ public struct DigitPadStyle: ButtonStyle {
         
 	}
 }
-#else
-#error("This is a watchOS only library.")
-#endif
+
 public enum TextViewAlignment {
 	case trailing
 	case leading
@@ -83,7 +81,6 @@ public enum KeyboardStyle {
     case numbers
 }
 #if DEBUG
-#if os(watchOS)
 struct EnteredTextKeys_Previews: PreviewProvider {
     static var previews: some View {
         EnteredText( text: .constant(""), presentedAsModal: .constant(true), style: .numbers)
@@ -97,5 +94,4 @@ struct EnteredTextKeys_Previews: PreviewProvider {
         EnteredText( text: .constant(""), presentedAsModal: .constant(true), style: .decimal).previewDevice("Apple Watch Series 3 - 42mm")
     }
 }
-#endif
 #endif
